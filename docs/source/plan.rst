@@ -33,22 +33,30 @@ References
 .. references will include industrial standards.   Document identifier 
 .. Document title
 
-+--------------+--------------------+------------------------------------------------+
-| **Document** | **Document Title** | **URL**                                        |
-| **ID**       |                    |                                                |
-+==============+====================+================================================+
-| [pep8]       | PEP-8: Python      | http://www.python.org/dev/peps/pep-0008/       |
-|              | Enhancement        |                                                |
-|              | Proposal 8: Style  |                                                |
-|              | Guide for Python   |                                                |
-|              | Code               |                                                |
-+--------------+--------------------+------------------------------------------------+
-| [ipy]        | The IPython        | http://ipython.org/notebook.html               |
-|              | Notebook — IPython |                                                |
-+--------------+--------------------+------------------------------------------------+
-| [tpope]      | A Note About Git   | http://tbaggery.com/2008/04/19/a-note-about-gi |
-|              | Commit Messages    | t-commit-messages.html                         |
-+--------------+--------------------+------------------------------------------------+
++--------------+------------------------------+-------------------------------------+
+| **Document** | **Document Title**           | **URL**                             |
+| **ID**       |                              |                                     |
++==============+==============================+=====================================+
+| [hmsc]       | Ovaskainen, O. et al. 2017.  | https://doi.org/10.1111/ele.12757   |
+|              | How to make more out of      |                                     |
+|              | community data? A conceptual |                                     |
+|              | framework and its            |                                     |
+|              | implementation as models     |                                     |
+|              | and software. Ecology        |                                     |
+|              | Letters 20, 561-576.         |                                     |
++--------------+------------------------------+-------------------------------------+
+| [pep8]       | PEP-8: Python                | http://www.python.org/dev/peps/pep- |
+|              | Enhancement                  | 0008/                               |
+|              | Proposal 8: Style            |                                     |
+|              | Guide for Python             |                                     |
+|              | Code                         |                                     |
++--------------+------------------------------+-------------------------------------+
+| [ipy]        | The IPython                  | http://ipython.org/notebook.html    |
+|              | Notebook — IPython           |                                     |
++--------------+------------------------------+-------------------------------------+
+| [tpope]      | A Note About Git             | http://tbaggery.com/2008/04/19/a-   |
+|              | Commit Messages              | note-about-git-commit-messages.html |
++--------------+------------------------------+-------------------------------------+
 
 Project Management
 ~~~~~~~~~~~~~~~~~~
@@ -159,66 +167,50 @@ Work Breakdown Structure and Task Estimation
     -  
   * - 4.1.
     -  Software Architecture Design
-    -  150
+    -  5
   * - 4.1.1.
-    -  Design adapter to support git
-    -  3
+    -  Design modules for data loading/preparation/segregation
+    -  5
   * - 4.1.2.
-    -  Step 1: Setting the model structure and fitting the model
-    -  Step 2: Examining MCMC convergence
-Step 3: Evaluating model fit
-Step 4: Exploring parameter estimates
-Step 5: Making predictions
-    -  3
+    -  Design modules for model structure and fit
+    -  5
   * - 4.1.3.
-    -  Design cell based diff algorithm
-    -  6
-  * - 4.1.5.
-    -  Design header based diffs
-    -  3
-  * - 4.1.6.
-    -  Design html for diff prototype
-    -  2
-  * - 4.1.16.
-    -  Design nbdiff.org
-    -  10
-  * - 4.1.17.
-    -  Design selective staging
-    -  3
-  * - 4.1.22.
-    -  Design Bitbucket integration
-    -  20
+    -  Design modeles for model evaluation
+    -  5
+  * - 4.1.4.
+    -  Design sampler for prototype
+    -  5
   * - 4.2.
-    -  User Interface Design
-    - 
+    -  Program Interface Design
+    -  5
   * - 4.2.1.
-    -  Create UI mockups
-    -  10
+    -  Create program configuration design
+    -  5
   * - 4.2.2.
-    -  Design UI for cell based diffs
-    -  3
+    -  Design program's command line interface (CLI)
+    -  5
   * - **5.**
     -  **PROTOTYPE**
     -  
   * - 5.1.1.
-    -  Design prototype version of diff algorithm
+    -  Design prototype version of JDSM algorithm
+    -  5
+  * - 5.1.2.
+    -  Design prototype version of latent variables algorithm
     -  5
   * - 5.1.3.
-    -  Design UI for diff prototype
-    -  3
+    -  Design CLI for prototype
+    -  5
+  * - 5.1.4.
+    -  Design tests for sampler for JDSM prototype
+    -  5
   * - 5.1.5.
-    -  Design tests for js for diff prototype
-    -  4
+    -  Implement prototype version of JDSM algorithm
+    -  5
+  * - 5.1.6.
+    -  Implement tests for sampler for JDSM prototype
+    -  5
   * - 5.1.7.
-    -  Implement protype version of diff algorithm
-    -  15
-  * - 5.1.9.
-    -  Implement html for merge prototype
-    -  2
-  * - 5.1.11.
-    -  Implement tests for js for merge prototype
-    -  2
-  * - 5.1.13.
     -  Perform usability testing of prototype
     -  5
   * - **6.**
@@ -228,7 +220,13 @@ Step 5: Making predictions
     - Development
     -  
   * - 6.1.1.
-    -  Implement nbdiff.org
+    -  Implement sampler
+    -  20
+  * - 6.1.2.
+    -  Implement priors
+    -  20
+  * - 6.1.2.
+    -  Implement MCMC
     -  20
   * - **7.**
     -  **TESTING AND QUALITY ASSURANCE**
@@ -237,7 +235,7 @@ Step 5: Making predictions
     -  Test Plan
     -  
   * - 7.1.1.
-    -  Design tests for adapter to support git
+    -  Design tests for 
     -  5
   * - 7.2.
     -  Unit Testing
@@ -246,11 +244,11 @@ Step 5: Making predictions
     -  Implement tests for adapter to support git
     -  12
   * - 7.3.
-    -  User Interface Testing
-    -  
+    -  Program CLI Testing
+    -  5
   * - 7.3.1.
     -  Perform usability testing
-    -  20
+    -  5
   * - **8.**
     -  **INTEGRATION**
     -  
@@ -267,7 +265,7 @@ Step 5: Making predictions
     -  Define Online Help
     -  
   * - 9.2.1.
-    -  Documentation for nbdff-docs.readthedocs.org
+    -  Documentation for hmsc.readthedocs.org
     -  25
   * - 9.3.
     -  Installation and User Guide
@@ -544,19 +542,13 @@ are effective for our process.
    -  PyFlakes: is a tool for automatically checking our Python code
       against the PEP-8 standard [pep8].
    -  Mock: is a library for mocking objects in unit tests for Python.
+   -  Black: is an uncompromising Python code formatter.
 
--  JavaScript: is the programming language supported by all major web
-   browsers. Since our interface will likely be web-based, we will need
-   to use this language to provide an interactive UI.
-
-   -  Chrome Developer Tools provide a Javascript debugger and a log.
-   -  PhantomJS provides a headless testing environment that mimics a
-      web browser.
-   -  Selenium will be used to test the web-based UI.
-   -  QUnit is a unit-testing framework for Javascript.
-   -  JSLint for JS quality control: http://www.jslint.com/ .
-
--  Chrome: Our web-based UI will targeted towards Chrome.
+-  TensorFlow: is a free and open-source software library for 
+   machine learning and artificial intelligence. 
+-  tf.linalg: is a TensorFlow library with operations for linear algebra.
+-  Scipy: is a free and open-source Python library used for scientific 
+   computing and technical computing.
 -  Documentation:
 
    -  `Epydoc <http://epydoc.sourceforge.net/>`__ is a tool to
@@ -570,8 +562,6 @@ are effective for our process.
    and checks code quality every time a patch is submitted to a project.
    This will be used to provide automatic verification of pull requests
    to aid reviewers.
--  GitHub: is a free, online service for code hosting, code review,
-   issue/bug tracking, and release management.
 
 Software Development Rules and Standards
 ----------------------------------------
@@ -581,7 +571,7 @@ to the following standards. Where possible, we will use a tool to
 automatically verify that our code adheres to the standard. We will also
 verify this through our code reviews.
 
--  Coding standard for Python: PEP-8 [pep8]
+-  Coding standard for Python: PEP-8 [pep8] using Black
 -  Enforced by PyFlakes: https://pypi.python.org/pypi/pyflakes
 -  JavaScript JSLint coding standard
 -  Enforced by the JSLint tool: http://www.jslint.com/
@@ -606,6 +596,12 @@ Our coverage goals are:
    will not track our JavaScript code coverage numerically. We will
    instead use our judgement when reviewing additions to the code base
    and request additional tests when necessary.
+
+
+Feature Tests
+~~~~~~~~~~~~~
+
+- 
 
 Integration Tests
 ~~~~~~~~~~~~~~~~~
