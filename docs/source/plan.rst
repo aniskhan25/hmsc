@@ -71,9 +71,6 @@ Otso Ovaskainen. He is the one of the PI of the Digital Twins project.
 +----------------+------------+-----------------------+
 | **Title**      | **Name**   | **Responsibilities**  | 
 +================+============+=======================+
-| Supervisor     | Otso T     | Project Management    |
-|                | Ovaskainen |                       |
-+----------------+------------+-----------------------+
 | Team Member    | Gleb       | Software Development, |
 |                | Tikhonov   | Documentation,        |
 |                |            | Testing               |
@@ -112,63 +109,51 @@ Work Breakdown Structure and Task Estimation
   * - 1.1.
     -  Project Proposal
     -  5
-  * - 1.2.
-    -  Design logo
-    -  3
   * - **2.**
     -  **PROJECT PROPOSAL**
     -  
   * - 2.1.
     -  Project Management Plan
-    -  16
+    -  5
   * - 2.2.
     -  Vision Document
-    - 20
+    - 5
   * - 2.2.1.
     -  Perform competitive analysis
-    -  16.5
+    -  5
   * - 2.2.2.
-    -  Research IPython Notebook
-    -  20
+    -  Research joint species distribution modeling
+    -  5
   * - 2.3.
     -  Risk Management Plan
-    -  12
+    -  5
   * - 2.4.
     -  Activity Plan
-    -  2
+    -  5
   * - **3.**
     -  **REQUIREMENT GATHERING**
     -  
   * - 3.1.
     -  Software Requirements Specification
-    -  25
+    -  5
   * - 3.2.
     -  Data Gathering
-    -  
+    -  5
   * - 3.2.1.
-    -  Research existing diff tools
-    -  6
+    -  Research existing joint species distribution modeling
+    -  5
   * - 3.2.2.
-    -  Research version control systems
-    -  10
+    -  Research end-to-end machine learning
+    -  5
   * - 3.2.3.
-    -  Research IPython Notebook html design
-    -  7
-  * - 3.2.4.
-    -  Research IPython Notebook image rendering from JSON
-    -  4
-  * - 3.2.5.
-    -  Research IPython Notebook js rendering of notebooks
-    -  4
-  * - 3.2.6.
-    -  Research IPythonNotebook use of CodeMirror
-    -  4
+    -  Research high-performance computing for machine learning
+    -  5
   * - 3.3.
-    -  Interview Stakeholders
-    -  4
+    -  Interview End-users
+    -  5
   * - 3.4.
-    -  Research Similar Products
-    -  10
+    -  Research Similar Solutions
+    -  5
   * - **4.**
     -  **DESIGN**
     -  
