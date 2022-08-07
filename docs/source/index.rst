@@ -1,13 +1,12 @@
 Welcome to HMSC's documentation!
 ===================================
 
-HMSC is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+HMSC (Hierarchical Modelling of Species Communities) framework is a 
+statistical framework for analysis of multivariate data, typically 
+from species communities.
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+.. Check out the :doc:`usage` section for further information, including
+.. how to :ref:`installation` the project.
 
 .. note::
 
@@ -18,6 +17,5 @@ Contents
 
 .. toctree::
 
-   usage
    api
    plan
