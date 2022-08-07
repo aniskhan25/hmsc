@@ -11,27 +11,19 @@ Document Overview
 ~~~~~~~~~~~~~~~~~
 
 This document outlines the manner in which the project will be planned 
-and executed. It describes the project’s development process: how and 
-when different activities will be undertaken, when stakeholders will be 
-consulted, how and when the software will be released, and how changes 
-to the software will be tracked. It contains additional information on 
-development tools that the team will use. As requirements analysis and 
-further project planning is performed, this document will describe the 
-work performed (and to be performed) on the project.
+and executed. It describes the project's development process. It 
+contains additional information on development tools used.
 
 Abbreviations and Glossary
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-PO
-  Product owner; main stakeholder of the project.
-
-  
+HMSC
+  Hierarchical Modelling of Species Communities software name.
+CSC
+  Finnish IT Center for Science primary stakeholder.
+    
 References
 ~~~~~~~~~~
-
-.. Provide references to all internal and external documents. External
-.. references will include industrial standards.   Document identifier 
-.. Document title
 
 +--------------+------------------------------+-------------------------------------+
 | **Document** | **Document Title**           | **URL**                             |
@@ -45,18 +37,19 @@ References
 |              | and software. Ecology        |                                     |
 |              | Letters 20, 561-576.         |                                     |
 +--------------+------------------------------+-------------------------------------+
-| [pep8]       | PEP-8: Python                | http://www.python.org/dev/peps/pep- |
-|              | Enhancement                  | 0008/                               |
-|              | Proposal 8: Style            |                                     |
-|              | Guide for Python             |                                     |
-|              | Code                         |                                     |
-+--------------+------------------------------+-------------------------------------+
-| [ipy]        | The IPython                  | http://ipython.org/notebook.html    |
-|              | Notebook — IPython           |                                     |
+| [pep8]       | PEP 8 – Style Guide for      | https://peps.python.org/pep-0008/   |
+|              | Python Code                  |                                     |
 +--------------+------------------------------+-------------------------------------+
 | [tpope]      | A Note About Git             | http://tbaggery.com/2008/04/19/a-   |
 |              | Commit Messages              | note-about-git-commit-messages.html |
 +--------------+------------------------------+-------------------------------------+
+| [cct]        | Cookiecutter: Better Project | https://cookiecutter.readthedocs.io |
+|              | Templates                    | /en/stable/                         |
++--------------+------------------------------+-------------------------------------+
+| [nbdiff]     | Welcome to NBDiff's          | https://nbdiff-docs.readthedocs.io/ |
+|              | Documentation!               | en/latest/index.html                |
++--------------+------------------------------+-------------------------------------+
+
 
 Project Management
 ~~~~~~~~~~~~~~~~~~
@@ -74,7 +67,9 @@ development, and testing tasks. Their responsibilities are listed
 in detail below.
 
 In addition to the project team, we have a project supervisor, Dr
-Otso Ovaskainen. He is the one of the PI of the Digital Twins project.
+Otso Ovaskainen. He is the one of the PI of project funded by the 
+HORIZON-INFRA-2021-TECH-01 titled, "Biodiversity Digital Twin for 
+Advanced Modelling, Simulation and Prediction Capabilities."
 
 +----------------+------------+-----------------------+
 | **Title**      | **Name**   | **Responsibilities**  | 
@@ -87,13 +82,6 @@ Otso Ovaskainen. He is the one of the PI of the Digital Twins project.
 |                | Rahman     | Documentation,        |
 |                |            | Testing               |
 +----------------+------------+-----------------------+
-
-.. _orgchart:
-
-.. figure:: images/orgchart.png
-  :align: center
-
-  Team organization
    
 Work Breakdown Structure, Tasks and Planning
 --------------------------------------------
@@ -112,253 +100,144 @@ Work Breakdown Structure and Task Estimation
     -  **Work**
     -  **Estimated effort (hrs)**
   * - **1.**
-    -  **PROJECT INTIALIZATION**
-    -  
+    -  **PROJECT MANAGEMENT PLAN**
+    -  65
   * - 1.1.
-    -  Project Proposal
-    -  5
-  * - **2.**
-    -  **PROJECT PROPOSAL**
-    -  
-  * - 2.1.
-    -  Project Management Plan
-    -  5
-  * - 2.2.
-    -  Vision Document
-    - 5
-  * - 2.2.1.
-    -  Perform competitive analysis
-    -  5
-  * - 2.2.2.
-    -  Research joint species distribution modeling
-    -  5
-  * - 2.3.
-    -  Risk Management Plan
-    -  5
-  * - 2.4.
-    -  Activity Plan
-    -  5
-  * - **3.**
-    -  **REQUIREMENT GATHERING**
-    -  
-  * - 3.1.
     -  Software Requirements Specification
-    -  5
-  * - 3.2.
+    -  25
+  * - 1.2.
     -  Data Gathering
-    -  5
-  * - 3.2.1.
+    -  30
+  * - 1.2.1.
     -  Research existing joint species distribution modeling
-    -  5
-  * - 3.2.2.
+    -  10
+  * - 1.2.2.
     -  Research end-to-end machine learning
-    -  5
-  * - 3.2.3.
+    -  10
+  * - 1.2.3.
     -  Research high-performance computing for machine learning
-    -  5
-  * - 3.3.
+    -  10
+  * - 1.3.
     -  Interview End-users
     -  5
-  * - 3.4.
-    -  Research Similar Solutions
+  * - 1.4.
+    -  Research Similar Solutions/Attempts
     -  5
-  * - **4.**
+  * - **2.**
     -  **DESIGN**
-    -  
-  * - 4.1.
+    -  25
+  * - 2.1.
     -  Software Architecture Design
-    -  5
-  * - 4.1.1.
+    -  15
+  * - 2.1.1.
     -  Design modules for data loading/preparation/segregation
     -  5
-  * - 4.1.2.
+  * - 2.1.2.
     -  Design modules for model structure and fit
     -  5
-  * - 4.1.3.
+  * - 2.1.3.
     -  Design modeles for model evaluation
     -  5
-  * - 4.1.4.
-    -  Design sampler for prototype
-    -  5
-  * - 4.2.
+  * - 2.2.
     -  Program Interface Design
-    -  5
-  * - 4.2.1.
+    -  10
+  * - 2.2.1.
     -  Create program configuration design
     -  5
-  * - 4.2.2.
+  * - 2.2.2.
     -  Design program's command line interface (CLI)
     -  5
-  * - **5.**
+  * - **3.**
     -  **PROTOTYPE**
-    -  
-  * - 5.1.1.
-    -  Design prototype version of JDSM algorithm
+    -  20
+  * - 3.1.
+    -  Design prototype version of algorithm
     -  5
-  * - 5.1.2.
-    -  Design prototype version of latent variables algorithm
-    -  5
-  * - 5.1.3.
+  * - 3.2.
     -  Design CLI for prototype
     -  5
-  * - 5.1.4.
-    -  Design tests for sampler for JDSM prototype
+  * - 3.3.
+    -  Design tests for prototype
     -  5
-  * - 5.1.5.
-    -  Implement prototype version of JDSM algorithm
+  * - 3.4.
+    -  Implement prototype version
     -  5
-  * - 5.1.6.
-    -  Implement tests for sampler for JDSM prototype
-    -  5
-  * - 5.1.7.
-    -  Perform usability testing of prototype
-    -  5
-  * - **6.**
+  * - **4.**
     -  **SOFTWARE DEVELOPMENT**
     -  
-  * - 6.1.
+  * - 4.1.
     - Development
-    -  
-  * - 6.1.1.
-    -  Implement sampler
+    -  220
+  * - 4.1.1.
+    -  Implement data loader
     -  20
-  * - 6.1.2.
-    -  Implement priors
-    -  20
-  * - 6.1.2.
-    -  Implement MCMC
-    -  20
-  * - **7.**
+  * - 4.1.2.
+    -  Implement base model
+    -  100
+  * - 4.1.3.
+    -  Implement model trainer
+    -  100
+  * - **5.**
     -  **TESTING AND QUALITY ASSURANCE**
-    -  
-  * - 7.1.
+    -  25
+  * - 5.1.
     -  Test Plan
-    -  
-  * - 7.1.1.
-    -  Design tests for 
     -  5
-  * - 7.2.
+  * - 5.2.
     -  Unit Testing
-    -  
-  * - 7.2.1.
-    -  Implement tests for adapter to support git
-    -  12
-  * - 7.3.
+    -  15
+  * - 5.2.1.
+    -  Implement tests for loader
+    -  5
+  * - 5.2.2.
+    -  Implement tests for trainer
+    -  5
+  * - 5.2.3.
+    -  Implement tests for predictor
+    -  5
+  * - 5.3.
     -  Program CLI Testing
     -  5
-  * - 7.3.1.
-    -  Perform usability testing
-    -  5
-  * - **8.**
+  * - **6.**
     -  **INTEGRATION**
     -  
-  * - 8.1.
+  * - 6.1.
     -  Integration Testing
-    -  25
-  * - **9.**
+    -  5
+  * - **7.**
     -  **DEPLOYMENT/ROLLOUT**
-    -  
-  * - 9.1.
+    -  50
+  * - 7.1.
     -  Define Configuration and Readme Files
-    -  4
-  * - 9.2.
+    -  5
+  * - 7.2.
     -  Define Online Help
-    -  
-  * - 9.2.1.
+    -  30
+  * - 7.2.1.
     -  Documentation for hmsc.readthedocs.org
-    -  25
-  * - 9.3.
+    -  20
+  * - 7.3.
     -  Installation and User Guide
-    -  
-  * - 9.3.1.
+    -  5
+  * - 7.3.1.
     -  Document installation instructions
-    -  12
-  * - 9.3.2.
+    -  5
+  * - 7.3.2.
     -  Document user guide
-    -  10
-  * - 9.4.
+    -  5
+  * - 7.4.
     -  Maintain and Update Documentation
-    -  69
-  * - **10.**
+    -  15
+  * - **8.**
     - **PROJECT PLANNING**
-    - 
-  * - 10.1.
+    - 25
+  * - 8.1.
     -  Team Meetings
-    -  196
-  * - 10.2.
+    -  20
+  * - 8.2.
     -  Stakeholder Meetings
-    -  98
-
-Activity Planning
-~~~~~~~~~~~~~~~~~
-
-At the beginning of each release cycle (see “Software Development
-Process” below) we will work with our stakeholder to determine the
-features that will be developed in that cycle. They will be chosen based
-on stakeholder opinion, and their relative value and risk;
-high-risk/high-value features will be developed before
-low-risk/low-value features.
-
-We will incorporate feedback from each release of our software into the
-planning for our next release, adjusting the project requirements
-accordingly.
-
-The general approach to activity planning is described in the following
-diagram; it should not be taken as an outline of our specific project.
-
-.. _gantt:
-
-.. figure:: images/iidevgantt.png
-  :align: center
-
-Activity planning and development model example (image from
-http://upload.wikimedia.org/wikipedia/commons/0/05/Development-iterative.gif)
-
-See the *Activity Plan*
-
-Planned Effort and Earned Value
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. list-table:: WBS
-  :header-rows:1
-
-  * - 
-    - **M1**
-    - **M2** 
-    - **M3**
-    - **M4** 
-    - **M5** 
-    - **M6** 
-  * - Planned effort (hrs)
-    - 196.5
-    - 378
-    - 217
-    - 358
-    - 245
-    - 215
-  * - Actual effort (hrs)
-    - 295
-    - 337
-    - 247
-    - 358
-    - 452
-    - 396
-  * - Earned value (hrs)
-    - 196.5
-    - 378
-    - 192
-    - 202
-    - 359
-    - 282
+    -  5
     
-See *Hour Tracking* for detailed breakdown of Actual Effort
-    
-Resource Identification
------------------------
-
-No additional resources beyond the project team’s effort and the
-resources granted to us by the capstone course are needed.
-
 Relationships with project stakeholders
 ---------------------------------------
 
@@ -370,20 +249,7 @@ End-User Involvement
 
 As our project will be an open source project, many end-users will
 choose to give feedback on the GitHub issue tracker and mailing list,
-before and after releases. We will also solicit feedback from the
-IPython community while establishing our requirements and throughout the
-development process — this will be done through the IPython mailing
-list.
-
-However, not all users are connected to the online IPython community —
-particularly the ones that our stakeholder Greg Wilson would like to
-target (scientists with little skill in software engineering). We will
-involve these users once we have a release of the software. In
-particular, we will involve them in a usability test (which we will
-describe in our test plan document.)
-
-Greg Wilson also uses the IPython Notebook himself, so the information
-he provides us with will be similar to that of other end-users.
+before and after releases. 
 
 Communication
 -------------
@@ -394,12 +260,12 @@ Meetings
 .. What meetings you organize during development and what is expected to
 .. happen during them.
 
--  Initial PO meeting: We will meet our PO in person and discuss project
+-  Initial meeting: We will meet with our PI and discuss project
    requirements and goals.
--  Weekly PO meeting: We will discuss the project’s progress weekly with
-   our PO in a remote meeting. We will discuss the features in progress;
-   our progress towards the next release; and perform requirements
-   analysis.
+-  Weekly meeting: We will discuss the project's progress bi-weekly with
+   our team members in a remote meeting. We will discuss the features in 
+   progress; our progress towards the next release/prototype, and review
+   feedback from interested project repository watchers.
 -  Post-release meeting: We will discuss a release of the software after
    it is published.
 
@@ -409,35 +275,34 @@ Reviews
 .. Describe what kinds of reviews are organized during the project such as
 .. design reviews, tests, code reviews etc. and what happens in these
 .. reviews.
-
 -  Code Review: Code review will be done on every pull request (i.e.,
    code change).
 
-   -  At least one developer other than the author will review the code
-      change.
+   -  At least one team member other than the author will review the 
+   -  code change.
    -  The reviewer(s) will annotate the code with their comments.
    -  The developer will revise their pull request to satisfy the
       reviewer.
    -  The reviewer will merge the code change into the main repository.
 
 -  Design Review: New features will be discussed in the GitHub issue
-   tracker. Feedback will be solicited from interested stakeholders.
+   tracker. Feedback will be solicited from interested watchers.
 -  Release Candidates (RCs): before each release, a release candidate
-   version will be provided to the public for review. This will provoke
-   feedback of various kinds.
+   version will be provided to the supervisor and interested end-users
+   for review. This will provoke feedback of various kinds.
 
 Training
 ~~~~~~~~
 
 .. Describe the training, if any, of the people involved in the project.
 
-We started training during the summer to learn both python and
-javascript by assigning two to three chapter from both programming
-languages to be read by set deadlines. We would have meetings to review
-the topics that had been covered in the readings and discuss if we had
-any difficulties. We intend to continue this training throughout the
-semester to ensure that we continue to learn both programming languages
-so that we produce high quality code.
+We started training before project initiation to learn both the pythonic
+way of coding, end-to-end machine learning frameworks, and linear algebra
+libraries. Before implementing a feature, we would have meetings to review
+the topics that had been covered in the trainings and discuss available
+choices for its implementation. We intend to continue this training 
+throughout the project development phase to produce high quality code
+and proficient software.
 
 System Requirements and Project Input Data
 ------------------------------------------
@@ -452,13 +317,13 @@ Software Configuration Management
 .. database is saved etc
 
 We will use Git for software configuration management. Each change to
-the software will be captured in a commit on the developer’s computer.
+the software will be captured in a commit on the developer's computer.
 These changes will then be uploaded to GitHub for review and merging
 into the master branch.
 
 Each commit contains a description of the change. We will follow the
 recommendations found on Tim Pope’s blog post on the
-subject \ `[tpope] <http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html>`__ and
+subject \ '[tpope] <http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html>'__ and
 enforce the rules during code review.
 
 Documentation Configuration Management
@@ -477,54 +342,34 @@ Software Development Management
 Software Development Process
 ----------------------------
 
-.. Describe and justify the development model you will adopt. Include a
-.. (tentative) list of minor and major milestones. For SOEN490 you are
-.. expected to deliver an interim report upon reaching a major milestone.*
+Our development process will be based on an mixed development approach. 
+The approach combines both the vertical and the horizontal approaches. 
+The idea is to divide the project into features (vertical). Then each 
+feature is divided into layers (horizontal) and attempted in an 
+iterative and incremental manner. The rationale for this choice is:
 
-Our development process will be based on an iterative and incremental
-model. The rationale for this choice is:
+-  to focus on important features in the project.
+-  to continuous perform unit and integration tests, this makes the 
+   outcomes predictable.
+-  to regularly gather feedback to adjust requirements and design.
 
--  We wish to release functioning subsets of the final system to
-   stakeholders early in the project.
--  We wish to gather feedback from stakeholders in order to adjust our
-   requirements and design.
--  We wish to improve project quality by revisiting previously released
-   artifacts including source code and documentation.
--  We wish to reduce project risk by implementing high-risk, high-value
-   requirements first or based on the order our stakeholder prefers.
-
-We have split the project into six major milestones spaced 5 weeks
-apart. These will have equal portions of the budget allocated to them.
-Each milestone will consist of a (public) release of the functioning
-software and a release of updated documents to the course coordinator.
-Minor milestones will be one week before each major milestone and the
-output will be a release candidate of the software.
+We have split the project into three major milestones spaced 5 weeks
+apart. These will have equal portions of work with a release 
+comprising a functioning feature of the software and a release of 
+updated documents to the supervisor.
 
 +-----------------+----------------------+
 | **Milestone**   | **Milestone Date**   |
 +=================+======================+
-| M1              | 2013-10-21           |
+| M1              | 2012-09-19           |
 +-----------------+----------------------+
-| M2              | 2013-11-25           |
+| M2              | 2012-10-24           |
 +-----------------+----------------------+
-| M3              | 2013-12-23           |
-+-----------------+----------------------+
-| M4              | 2014-02-03           |
-+-----------------+----------------------+
-| M5              | 2014-03-03           |
-+-----------------+----------------------+
-| M6              | 2014-03-31           |
+| M3              | 2012-11-28           |
 +-----------------+----------------------+
 
 Software Development Tools
 --------------------------
-
-.. Describe  the environment (hardware and software, such as IDE), the
-.. software configuration and all other tools (and their versions) that you
-.. deploy in this project. For SOEN490: Because of the nature of this
-.. exercise, there are restrictions on what you are allowed to reuse. For
-.. example, you may reuse libraries, but you may not reuse entire services.
-.. Please confirm with your instructor.
 
 The following is a list of the main tools we will use while developing
 this project. We will add tools to this document as we discover which
@@ -534,11 +379,10 @@ are effective for our process.
 -  GitHub: is a hosting service for Git that provides a web-based
    interface to various Git features, and includes issue trackers and
    release hosting.
--  Python: is the programming language that the IPython notebook is
-   written in. In order to be compatible with the Notebook’s development
-   process, we will also adopt Python for our tool.
+-  Python: is the programming language compatible with the TensorFlow
+   framework, we will adopt it to program our software.
 
-   -  Nosetests: is a unit testing tool for Python.
+   -  PyTests: is a unit testing tool for Python.
    -  PyFlakes: is a tool for automatically checking our Python code
       against the PEP-8 standard [pep8].
    -  Mock: is a library for mocking objects in unit tests for Python.
@@ -551,11 +395,10 @@ are effective for our process.
    computing and technical computing.
 -  Documentation:
 
-   -  `Epydoc <http://epydoc.sourceforge.net/>`__ is a tool to
-      automatically generate API documentation from Python source code.
    -  Sphinx: is a widely-used documentation system for Python. This
-      will be useful for manually written documentation (including
-      installation instructions, tutorials, etc.)
+      will be useful for source code documentation and the manually 
+      written documentation (including installation instructions, 
+      tutorials, etc.)
 
 -  TravisCI (https://travis-ci.org/): is a free, online continuous
    integration service that runs automated tests, checks code coverage,
@@ -571,13 +414,124 @@ to the following standards. Where possible, we will use a tool to
 automatically verify that our code adheres to the standard. We will also
 verify this through our code reviews.
 
--  Coding standard for Python: PEP-8 [pep8] using Black
--  Enforced by PyFlakes: https://pypi.python.org/pypi/pyflakes
--  JavaScript JSLint coding standard
--  Enforced by the JSLint tool: http://www.jslint.com/
+-  Coding standard for Python: PEP-8 [pep8] automated using Black
+-  Static code analysis using PyFlakes: https://pypi.python.org/pypi/pyflakes
 
 For architectural documentation, we will use the Unified Modeling
 Language (UML).
+
+Project architecture
+--------------------
+
+.. _orgchart:
+
+The software domain involves a series of functional components including
+data loading/preparation and modelling. The following use cases can be 
+identified in general, namely
+
+-  Collect/load/prepare data
+-  View/use fitted model
+-  Fit/Evaluate a model
+
+The resulting use case diagram for the systems is,
+
+.. figure:: images/usecase.png
+  :align: center
+
+We present a two-layered view of the system: data and bussiness layer. 
+The layered view can be deployed on a single machine with a graphics 
+co-processor. The data is available locally on the machine with the 
+program invoked using a command-line interface. The data layer prepares
+the program and loads the data, followed by fitting and evaluating a 
+model.
+
+.. figure:: images/layered.png
+  :align: center
+
+The high-level logical view of the system captures the functionality 
+provided to its end-users, and it illustrates the collaborations among 
+the system components.
+ 
+.. figure:: images/hmsc-arch.png
+  :align: center
+
+The high-level deployment view of the software demonstrates that the 
+python source code is compatible for transformation into datagraphs 
+for execution on co-processors located remotely in the form of 
+high-performance computing platform.
+
+.. figure:: images/stack.png
+  :align: center
+
+Mapping existing R codebase
+---------------------------
+
+For reference the existing codebase in R has two main functions: 
+sample_mcmc() and compute_predicted_values(). Below is the callgraph 
+for sample_mcmc().
+
+.. figure:: images/mcmc-callgraph.png
+  :align: center
+
+Likewise, the callgraph for compute_predicted_values() (renamed as 
+compute_pred_vals()) is illustrated below. We plan to map these 
+functions into the suitable component within the logical view 
+presented earlier.
+
+.. figure:: images/pred-callgraph.png
+  :align: center
+
+Folder structure
+----------------
+
+The directory structure of your new project looks like this: 
+
+.. code-block::
+  
+  ├── LICENSE
+  ├── Makefile           <- Makefile with commands like `make data` or `make train`
+  ├── README.md          <- The top-level README for developers using this project.
+  ├── data
+  │   ├── external       <- Data from third party sources.
+  │   ├── interim        <- Intermediate data that has been transformed.
+  │   ├── processed      <- The final, canonical data sets for modeling.
+  │   └── raw            <- The original, immutable data dump.
+  │
+  ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
+  │
+  ├── models             <- Trained and serialized models, model predictions, or model summaries
+  │
+  ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
+  │                         the creator's initials, and a short `-` delimited description, e.g.
+  │                         `1.0-jqp-initial-data-exploration`.
+  │
+  ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
+  │
+  ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
+  │   └── figures        <- Generated graphics and figures to be used in reporting
+  │
+  ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
+  │                         generated with `pip freeze > requirements.txt`
+  │
+  ├── setup.py           <- Make this project pip installable with `pip install -e`
+  ├── src                <- Source code for use in this project.
+  │   ├── __init__.py    <- Makes src a Python module
+  │   │
+  │   ├── data           <- Scripts to download or generate data
+  │   │   └── make_dataset.py
+  │   │
+  │   ├── features       <- Scripts to turn raw data into features for modeling
+  │   │   └── build_features.py
+  │   │
+  │   ├── models         <- Scripts to train models and then use trained models to make
+  │   │   │                 predictions
+  │   │   ├── predict_model.py
+  │   │   └── train_model.py
+  │   │
+  │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
+  │       └── visualize.py
+  │
+  └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
 
 Test Phases Management
 ----------------------
@@ -585,65 +539,31 @@ Test Phases Management
 Unit tests
 ~~~~~~~~~~
 
-New patches to the system will be required to include unit tests where
-appropriate. Patches related to bugs will be required to include
-regression tests where appropriate.
-
-Our coverage goals are:
-
--  Python: statement coverage of at least 60%
--  JavaScript: code coverage tools for JavaScript are immature. Thus we
-   will not track our JavaScript code coverage numerically. We will
-   instead use our judgement when reviewing additions to the code base
-   and request additional tests when necessary.
+PyTest is a framework to improve testing productivity. The test are 
+written in Python language, they are easy and scalable.
 
 
 Feature Tests
 ~~~~~~~~~~~~~
 
-- 
+One or multiple unit tests can be used to test the functionality of 
+a component.
 
 Integration Tests
 ~~~~~~~~~~~~~~~~~
 
-To test multiple components of the software, we will use the unit
-testing frameworks listed above when the integration is between
-components in a shared language. In the case of testing integration
-between JavaScript and Python components, we will use Selenium, a
-browser automation tool.
+To test multiple components of the software or to perform end-to-end 
+testing to ensure that the software is working.
 
-System Tests
-~~~~~~~~~~~~
+Performance Tests
+~~~~~~~~~~~~~~~~~
 
-Before each release of our software, we will perform manual testing of
-the full system on the target platforms. This will be described in our
-test plan document.
-
-Where possible, system tests will be scripted with Selenium to ensure
-reproducible results.
-
-Verification Tests
-~~~~~~~~~~~~~~~~~~
-
-.. Describe how verification tests are (will be) managed. For example you
-.. may split verification tests in two phases: alpha and beta.
-
-A week before each release of our software, we will release a “Release
-Candidate” (RC) version of our release in order to solicit early
-feedback before publishing the final release. This will provide users a
-chance to test the tool in their own environments.
-
-Usability Tests
-~~~~~~~~~~~~~~~
-
-We will perform usability tests according to our test plan document.
+We will perform performance tests to measure the efficiency of a 
+piece of code. The size of the code may range from a single method 
+to the whole software.
 
 Problem Resolution
 ------------------
-
-.. Describe how feature requests, change requests, bug reports, questions
-.. nd generally anything that is originating outside the team will be
-.. handled.
 
 We will use GitHub’s issue tracking to handle all feature requests,
 change requests, inquiries, questions as well as to report bugs.
@@ -656,64 +576,3 @@ issue. Comments can be left on issues, allowing for discussion and
 problem solving among other team members, as well as status updates on
 the given issue. Finally, once an issue is resolved, the issue can be
 closed, allowing us to easily track which issues remain.
-
-Project architecture
---------------------
-
-.. _orgchart:
-
-.. figure:: source/hmsc-arch.png
-  :align: center
-
-
-Folder structure
-----------------
-
-The directory structure of your new project looks like this: 
-
-```
-├── LICENSE
-├── Makefile           <- Makefile with commands like `make data` or `make train`
-├── README.md          <- The top-level README for developers using this project.
-├── data
-│   ├── external       <- Data from third party sources.
-│   ├── interim        <- Intermediate data that has been transformed.
-│   ├── processed      <- The final, canonical data sets for modeling.
-│   └── raw            <- The original, immutable data dump.
-│
-├── docs               <- A default Sphinx project; see sphinx-doc.org for details
-│
-├── models             <- Trained and serialized models, model predictions, or model summaries
-│
-├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`.
-│
-├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-│
-├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-│   └── figures        <- Generated graphics and figures to be used in reporting
-│
-├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-│                         generated with `pip freeze > requirements.txt`
-│
-├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-├── src                <- Source code for use in this project.
-│   ├── __init__.py    <- Makes src a Python module
-│   │
-│   ├── data           <- Scripts to download or generate data
-│   │   └── make_dataset.py
-│   │
-│   ├── features       <- Scripts to turn raw data into features for modeling
-│   │   └── build_features.py
-│   │
-│   ├── models         <- Scripts to train models and then use trained models to make
-│   │   │                 predictions
-│   │   ├── predict_model.py
-│   │   └── train_model.py
-│   │
-│   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-│       └── visualize.py
-│
-└── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
-```
